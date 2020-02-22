@@ -1,7 +1,7 @@
 //import anything necessary
-import User from '../models/User';
-import Bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
+var User = require('../models/User');
+var Bcrypt = require('bcryptjs');
+var jwt = require('jsonwebtoken');
 
 
 exports.login = async function (req, res, error) {

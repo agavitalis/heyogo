@@ -1,12 +1,11 @@
-import express from 'express';
+var express = require('express');
 const router = express.Router();
-import authenticator from '../services/authenticator'
+var authenticator = require('../services/authenticator');
 
 //import controllers
-import  indexController from '../controllers/indexController';
-import  registerController from '../controllers/registerController';
-import  loginController  from '../controllers/loginController'
-
+var indexController = require('../controllers/indexController');
+var registerController = require('../controllers/registerController');
+var loginController = require('../controllers/loginController');
 
 
 //auth

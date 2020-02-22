@@ -1,10 +1,11 @@
-import express from 'express';
-import exphbs from 'express-handlebars';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
-import cors  from 'cors';
-import db_connection from './services/db';
-import web_routes from  './routes/web';
+var express = require('express');
+var exphbs = require('express-handlebars');
+var bodyParser = require('body-parser');
+var dotenv = require('dotenv');
+var cors = require('cors');
+var db_connection = require('./services/db');
+var web_routes = require('./routes/web');
+
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}))
@@ -29,6 +30,7 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 //Now tisten to this port 
+
 if (app.listen(process.env.PORT)) {
     console.log("Server is listening to Port " + process.env.PORT);
 }

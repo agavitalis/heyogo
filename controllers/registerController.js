@@ -1,6 +1,6 @@
 //necessary imports
-import Bcrypt from 'bcryptjs';
-import User from '../models/User';
+var User = require('../models/User');
+var Bcrypt = require('bcryptjs');
 
 exports.register = async function (req, res, error) {
 
