@@ -4,7 +4,7 @@
   "description": "A website for hugugo and foods",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,8 +30,7 @@
     "jsonpatch": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.1",
-    "multer": "^1.4.2",
-    "nodemon": "^2.0.2"
+    "multer": "^1.4.2"
   },
   "devDependencies": {}
 }
