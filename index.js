@@ -31,7 +31,7 @@ app.set('view engine', 'handlebars');
 
 //Now tisten to this port 
 
-if (app.listen(5000 || process.env.PORT)) {
+if (app.listen(process.env.PORT || 5000)) {
     console.log("Server is listening to Port " + process.env.PORT);
 }
 else{
