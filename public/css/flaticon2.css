@@ -1,0 +1,48 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 09/05/2019 08:54
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/fonts2/Flaticon.eot");
+  src: url("../fonts/fonts2/Flaticond41d.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/fonts2/Flaticon.woff2") format("woff2"),
+       url("../fonts/fonts2/Flaticon.woff") format("woff"),
+       url("../fonts/fonts2/Flaticon.ttf") format("truetype"),
+       url("../fonts/fonts2/Flaticon.html#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("Flaticon.html#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-delivery-truck:before { content: "\f100"; }
+.flaticon-certificate:before { content: "\f101"; }
+.flaticon-block:before { content: "\f102"; }
+.flaticon-conversation:before { content: "\f103"; }
+.flaticon-beverage:before { content: "\f104"; }
+.flaticon-rice-cooker:before { content: "\f105"; }
+.flaticon-spaghetti:before { content: "\f106"; }
+.flaticon-chef:before { content: "\f107"; }
+.flaticon-cooking:before { content: "\f108"; }
+.flaticon-user:before { content: "\f109"; }
+.flaticon-trophy:before { content: "\f10a"; }
+.flaticon-right-arrow:before { content: "\f10b"; }
+.flaticon-left-arrow:before { content: "\f10c"; }
+.flaticon-shopping-bag:before { content: "\f10d"; }
+.flaticon-phone-contact:before { content: "\f10e"; }
+.flaticon-log-in:before { content: "\f10f"; }

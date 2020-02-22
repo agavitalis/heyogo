@@ -15,8 +15,13 @@ router.use('/register', registerController.register)
 
 //protected routes
 //router.use('/json_patch',authenticator.authenticate, jsonController.json_patch)
-
+router.use('/blog', indexController.blog)
+router.use('/gallery', indexController.gallery)
+router.use('/products', indexController.products)
+router.use('/contact', indexController.contact)
+router.use('/about', indexController.about)
 router.use('/', indexController.index)
+
 
 //export the routers
 module.exports = router;

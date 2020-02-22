@@ -13,7 +13,7 @@ app.use(cors());
 dotenv.config();
 
 //db connection
-db_connection.connection_db()
+//db_connection.connection_db()
 
 //static files
 app.use(express.static('public'))
@@ -23,7 +23,8 @@ app.use(web_routes);
 
 //view engine here
 app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
+    defaultLayout: 'main',
+    // extname: 'html'
 }));
 app.set('view engine', 'handlebars');
 
