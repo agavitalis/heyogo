@@ -1,5 +1,5 @@
 //import anything necessary
-var User = require('../models/User');
+var User = require('../models/user');
 var Bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 
