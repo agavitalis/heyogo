@@ -82,3 +82,32 @@
     </div>
 </div>
 <!-- ck footer wrapper End -->
+	<!-- custom js-->
+	<script>
+		$(function() {
+			var Accordion = function(el, multiple) {
+				this.el = el || {};
+				this.multiple = multiple || false;
+		
+				// Variables privadas
+				var links = this.el.find('.link');
+				// Evento
+				links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+			}
+		
+			Accordion.prototype.dropdown = function(e) {
+				var $el = e.data.el;
+					$this = $(this),
+					$next = $this.next();
+		
+				$next.slideToggle();
+				$this.parent().toggleClass('open');
+		
+				if (!e.data.multiple) {
+					$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+				};
+			}	
+		
+			var accordion = new Accordion($('#accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10, #accordion11, #accordion12, #accordion13'), false);
+		});
+	</script>

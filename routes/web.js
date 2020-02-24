@@ -6,14 +6,20 @@ var authenticator = require('../services/authenticator');
 var indexController = require('../controllers/indexController');
 var registerController = require('../controllers/registerController');
 var loginController = require('../controllers/loginController');
-
+var dashboardController = require('../controllers/dashboardController');
+var productController = require('../controllers/productController');
 
 //auth
 router.use('/login', loginController.login)
 router.use('/register', registerController.register)
 
-//protected routes
+
+//protected routes(admin routes)
 //router.use('/json_patch',authenticator.authenticate, jsonController.json_patch)
+router.use('/admin_dashboard', dashboardController.dashboard)
+router.use('/admin_product', productController.product)
+
+//protected routes(website routes)
 router.use('/blog', indexController.blog)
 router.use('/gallery', indexController.gallery)
 router.use('/products', indexController.products)
