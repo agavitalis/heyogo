@@ -8,6 +8,10 @@ var registerController = require('../controllers/registerController');
 var loginController = require('../controllers/loginController');
 var dashboardController = require('../controllers/dashboardController');
 var productController = require('../controllers/productController');
+var galleryController = require('../controllers/galleryController');
+var contactController = require('../controllers/contactController');
+var userController = require('../controllers/userController');
+var blogController = require('../controllers/blogController');
 
 //auth
 router.use('/login', loginController.login)
@@ -18,6 +22,10 @@ router.use('/register', registerController.register)
 //router.use('/json_patch',authenticator.authenticate, jsonController.json_patch)
 router.use('/admin_dashboard', dashboardController.dashboard)
 router.use('/admin_product', productController.product)
+router.use('/admin_gallery', galleryController.gallery)
+router.use('/admin_contact', contactController.contact)
+router.use('/admin_user', userController.user)
+router.use('/admin_blog', blogController.blog)
 
 //protected routes(website routes)
 router.use('/blog', indexController.blog)
