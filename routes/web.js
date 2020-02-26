@@ -1,6 +1,7 @@
 var express = require('express');
 const router = express.Router();
 var authenticator = require('../services/authenticator');
+var Upload = require('../services/file_upload')
 
 //import controllers
 var indexController = require('../controllers/indexController');
@@ -21,7 +22,7 @@ router.use('/register', registerController.register)
 //protected routes(admin routes)
 //router.use('/json_patch',authenticator.authenticate, jsonController.json_patch)
 router.use('/admin_dashboard', dashboardController.dashboard)
-router.use('/admin_product', productController.product)
+router.use('/admin_product',Upload.upload.single('product_image'), productController.product)
 router.use('/admin_gallery', galleryController.gallery)
 router.use('/admin_contact', contactController.contact)
 router.use('/admin_user', userController.user)

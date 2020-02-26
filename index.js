@@ -8,9 +8,10 @@ var web_routes = require('./routes/web');
 
 
 const app = express();
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
-app.use(cors());
+
+app.use(cors({credentials:true,origin:'http://localhost:5000'}));
 dotenv.config();
 
 //db connection

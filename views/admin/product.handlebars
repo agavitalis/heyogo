@@ -60,35 +60,35 @@
                                                         <h1>Product Details </h1>
                                                     </div>
                                                     <div class="row clearfix">
-                                                        <!--Form Group-->
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <div class="field-label">Product Name <sup>*</sup>
+                                                        <form action="/admin_product" enctype="multipart/form-data" method="POST"> 
+                                                            <!--Form Group-->
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="field-label">Product Name <sup>*</sup>
+                                                                </div>
+                                                                <input type="text" name="product_name" 
+                                                                    placeholder="">
                                                             </div>
-                                                            <input type="text" name="field-name" value=""
-                                                                placeholder="">
-                                                        </div>
+                                                            <!--Form Group-->
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="field-label">Brief Description</div>
+                                                                <textarea name="product_description"></textarea>
+                                                            </div>
+                                                            <!--Form Group-->
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="field-label">Product Image</div>
+                                                                <input type="file" name="product_image" value=""
+                                                                    placeholder="">
+                                                            </div>
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <button type="submit" class="btn btn-success float-right"> Add
+                                                                    product</button>
 
-                                                        <!--Form Group-->
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <div class="field-label">Brief Description</div>
-                                                            <textarea></textarea>
-                                                        </div>
-                                                        <!--Form Group-->
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <div class="field-label">Product Image</div>
-                                                            <input type="file" name="field-name" value=""
-                                                                placeholder="">
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <button class="btn btn-success float-right"> Add
-                                                                product</button>
-
-                                                        </div>
-
+                                                            </div>
+                                                        </form>
+                                                       
+                                          
                                                     </div>
                                                 </div>
-
-
 
                                             </div>
                                         </div>
