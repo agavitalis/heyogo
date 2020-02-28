@@ -15,7 +15,7 @@ app.use(cors({credentials:true,origin:'http://localhost:5000'}));
 dotenv.config();
 
 //db connection
-//db_connection.connection_db()
+db_connection.connection_db()
 
 //static files
 app.use(express.static('public'))
