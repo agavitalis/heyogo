@@ -47,4 +47,4 @@ exports.product = function (req, res, error) {
        
         
     }
-}
+} 
