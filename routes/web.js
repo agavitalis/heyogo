@@ -10,7 +10,7 @@ var loginController = require('../controllers/loginController');
 var dashboardController = require('../controllers/dashboardController');
 var productController = require('../controllers/productController');
 var galleryController = require('../controllers/galleryController');
-var contactController = require('../controllers/contactController');
+var contactController = require('../controllers/contact_usController');
 var userController = require('../controllers/userController');
 var blogController = require('../controllers/blogController');
 
@@ -28,12 +28,14 @@ router.use('/admin_contact', contactController.contact)
 router.use('/admin_user', userController.user)
 router.use('/admin_blog',Upload.upload.single('cover_image'), blogController.blog)
 
-//protected routes(website routes)
+//unprotected routes(website routes)
 router.use('/blog', indexController.blog)
 router.use('/gallery', indexController.gallery)
 router.use('/products', indexController.products)
 router.use('/contact', indexController.contact)
 router.use('/about', indexController.about)
+router.use('/customer_contact', indexController.customer_contact)
+
 router.use('/', indexController.index)
 
 

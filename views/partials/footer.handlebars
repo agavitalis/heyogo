@@ -19,20 +19,23 @@
             </div>
             
             <div class="col-lg-6 col-md-4 col-12 col-sm-12">
-                <div class="footer_widget footer_useful_wrapper footer_widget2 float_left">
-                    <h4>get in touch</h4>
-                    <div class="contect_form_footer float_left">
-                        <input type="text" name="name" placeholder="joahn doe"><i class="fas fa-user-alt"></i>
+                <form action="/customer_contact" method="POST">
+                    <div class="footer_widget footer_useful_wrapper footer_widget2 float_left">
+                        <h4>get in touch</h4>
+                        <div class="contect_form_footer float_left">
+                            <input type="text" name="name" placeholder="joahn doe"><i class="fas fa-user-alt"></i>
+                        </div>
+                        <div class="contect_form_footer float_left">
+                            <input type="text" name="email" placeholder="Email ID"><i class="fas fa-comment"></i>
+                        </div>
+                        <div class="contect_form_footer float_left">
+                            <textarea name="message" rows="4" placeholder="Your Message..."></textarea>
+                        </div>
+                        <div class="footer_btn float_left"> <input type="submit" value="Submit Message" class="btn btn-flat btn-danger"/>
+                        </div>
+                       
                     </div>
-                    <div class="contect_form_footer float_left">
-                        <input type="text" name="Email" placeholder="Email ID"><i class="fas fa-comment"></i>
-                    </div>
-                    <div class="contect_form_footer float_left">
-                        <textarea name="message" rows="4" placeholder="Your Message..."></textarea>
-                    </div>
-                    <div class="footer_btn float_left"> <a href="#">send message</a>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="col-lg-3 col-md-4 col-12 col-sm-12">
                 <div class="footer_widget footer_contact_wrapper footer_widget2 float_left">
