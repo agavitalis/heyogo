@@ -26,7 +26,7 @@ router.use('/admin_product',Upload.upload.single('product_image'), productContro
 router.use('/admin_gallery', galleryController.gallery)
 router.use('/admin_contact', contactController.contact)
 router.use('/admin_user', userController.user)
-router.use('/admin_blog', blogController.blog)
+router.use('/admin_blog',Upload.upload.single('cover_image'), blogController.blog)
 
 //protected routes(website routes)
 router.use('/blog', indexController.blog)
