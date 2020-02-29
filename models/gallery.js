@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var gallery_schema = new mongoose.Schema({
 
-    picture_name: {
+    title: {
         type: String,
     },
     

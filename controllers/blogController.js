@@ -37,5 +37,5 @@ exports.blog = function (req, res, error) {
          })
         
          
-     }
+    }
 }

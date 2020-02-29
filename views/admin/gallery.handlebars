@@ -40,6 +40,14 @@
                             </div>
                         </div>
                         <div class="col-lg-10 col-md-8 col-sm-9">
+                            {{#if response}}
+                                <div class="alert alert-primary alert-wth-icon alert-dismissible fade show" role="alert">
+                                    <span class="alert-icon-wrap"><i class="fa fa-info"></i></span>{{response}}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {{/if}}
                             <div id="accordion">
 
                                 <button class="btn btn-success float-right mb-5" data-toggle="collapse"
@@ -60,30 +68,32 @@
                                                         <h1>Picture Details </h1>
                                                     </div>
                                                     <div class="row clearfix">
-                                                        <!--Form Group-->
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <div class="field-label">Picture Title <sup>*</sup>
+                                                        <form action="/admin_gallery" enctype="multipart/form-data" method="POST">                                                     
+                                                            <!--Form Group-->
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="field-label">Picture Title <sup>*</sup>
+                                                                </div>
+                                                                <input type="text" required="true" name="title" value=""  placeholder="">
+                                                                   
                                                             </div>
-                                                            <input type="text" name="field-name" value=""
-                                                                placeholder="">
-                                                        </div>
 
-                                                        <!--Form Group-->
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <div class="field-label">Brief Description</div>
-                                                            <textarea></textarea>
-                                                        </div>
-                                                        <!--Form Group-->
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <div class="field-label">Description Image</div>
-                                                            <input type="file" name="field-name" value=""
-                                                                placeholder="">
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <button class="btn btn-success float-right"> Add
-                                                                to Gallery</button>
+                                                            <!--Form Group-->
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="field-label">Brief Description</div>
+                                                                <textarea name="description" required="true"></textarea>
+                                                            </div>
+                                                            <!--Form Group-->
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <div class="field-label">Description Image</div>
+                                                                <input type="file" name="picture" value=""  placeholder="" required="true">
+                                                                   
+                                                            </div>
+                                                            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                                <button class="btn btn-success float-right"> Add
+                                                                    to Gallery</button>
 
-                                                        </div>
+                                                            </div>
+                                                        </form>
 
                                                     </div>
                                                 </div>
