@@ -4,7 +4,16 @@ exports.gallery = function (req, res, error) {
     //get all my gallery photos
     if (req.method == "GET") {
 
-        res.render('admin/gallery');
+        Gallery.find({}).exec()
+        .then(function(pictures){
+            //catch any response on the url
+            var response = req.query.response
+            res.render('admin/gallery', {layout: 'main', pictures:pictures.map(picture => picture.toJSON()),response});
+        })
+        .catch(function(error){
+            
+            res.render('admin/gallery',{layout: 'main', error: error});
+        })
        
     }
    
@@ -16,7 +25,7 @@ exports.gallery = function (req, res, error) {
  
          var post = new Gallery({
 
-            title: req.body.name,
+            title: req.body.title,
             picture_description: req.body.description,
             picture: picture_name,
             picture_url: picture_url,

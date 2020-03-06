@@ -32,10 +32,10 @@
                 <div class="ck_prod_filter_main_box_wrapper">
                     <div class="row">
 
-                        <div class="col-lg-2 col-md-4 col-sm-3">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gc_shop_indx_select_box_wrapper">
                                 <div class="gc_causes_select_box">
-                                    <h4>Contacts</h4>
+                                    <h4>Messages for Admin</h4>
                                 </div>
                             </div>
                         </div>
@@ -48,25 +48,23 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Message</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
                                
+                                {{#each messages}}
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>{{name}}</td>
+                                        <td>{{email}}</td>
+                                        <td>{{message}}</td>
+                                        	
+                                    </tr>
+                                {{/each}}
+                              
                             </tbody>
                         </table>
                     </div>

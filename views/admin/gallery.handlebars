@@ -35,7 +35,7 @@
                         <div class="col-lg-2 col-md-4 col-sm-3">
                             <div class="gc_shop_indx_select_box_wrapper">
                                 <div class="gc_causes_select_box">
-                                    <h4>Gallery</h4>
+                                    <h4>Product Gallery</h4>
                                 </div>
                             </div>
                         </div>
@@ -117,25 +117,22 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Picture</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                               
+                                {{#each pictures}}
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>{{title}}</td>
+                                        <td>{{picture_description}}</td>
+                                        <td><img src="uploads/{{picture}}" alt="" width="50" height="50" ></td>
+                                        	
+                                    </tr>
+                                {{/each}}
+                              
                             </tbody>
                         </table>
                     </div>
