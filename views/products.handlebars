@@ -31,7 +31,7 @@
 							<div class="col-lg-5 col-md-5 col-sm-12 col-12">
 								<div class="gc_shop_indx_search_box_wrapper">
 									<div class="gc_shop_indx_search_box">
-										<p><span>Showing 1-9</span> of 256 Results</p>
+										<p><span>Our Products</span></p>
 									</div>
 								</div>
 							</div>
@@ -54,8 +54,7 @@
 									<div class="gc_causes_select_box">
 										<select>
 											<option>Sort Default</option>
-											<option>Sort Default</option>
-											<option>Sort Default</option>
+											
 										</select><i class="fa fa-angle-down"></i>
 									</div>
 								</div>
@@ -67,47 +66,34 @@
 							<div class="tab-content">
 								<div id="menu1" class="tab-pane active">
 									<div class="row">
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e1.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
+										{{#each products}}
+											
+											<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+												<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
+													<div class="ck_elem_slide_img float_left">
+														<img src="uploads/{{picture}}" alt="img">
 													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e2.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
+													<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
+														<h3>{{product_name}}</h3>
+														<div class="ck_elem_star">	<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+														</div>
+														<p>{{product_description}}</p>
+														{{!-- <h5>$ 10.00</h5>
+														<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
+														</div> --}}
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
+
+
+										{{/each}}
+										
+										
+										{{!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
 											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
 												<div class="ck_elem_slide_img float_left">
 													<img src="images/e3.png" alt="img">
@@ -126,127 +112,8 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e4.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e5.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e6.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e7.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e8.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e9.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
+										</div> --}}
+										
 										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs">
 											<div class="pager_wrapper">
 												<ul class="pagination">
@@ -269,27 +136,31 @@
 								</div>
 								<div id="menu2" class="tab-pane fade">
 									<div class="row">
-										<div class="col-md-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner ck_elem_slide_img_wrapper_inner_list float_left">
-												<div class="ck_elem_slide_img ck_elem_slide_img_list float_left align-self-center">
-													<img src="images/e1.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner ck_elem_slide_img_list_cont float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
+										{{#each products}}
+											<div class="col-md-12">
+												<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner ck_elem_slide_img_wrapper_inner_list float_left">
+													<div class="ck_elem_slide_img ck_elem_slide_img_list float_left align-self-center">
+														<img src="uploads/{{picture}}" alt="img">
 													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
+													<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner ck_elem_slide_img_list_cont float_left">
+														<h3>{{product_name}}</h3>
+														<div class="ck_elem_star">	<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+															<i class="fas fa-star"></i>
+														</div>
+														<p>{{product_description}}</p>
+														{{!-- <h5>$ 10.00</h5>
+														<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
+														</div> --}}
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="col-md-12">
+										{{/each}}
+
+
+										{{!-- <div class="col-md-12">
 											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner ck_elem_slide_img_wrapper_inner_list float_left">
 												<div class="ck_elem_slide_img ck_elem_slide_img_list float_left align-self-center">
 													<img src="images/e2.png" alt="img">
@@ -308,85 +179,8 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner ck_elem_slide_img_wrapper_inner_list float_left">
-												<div class="ck_elem_slide_img ck_elem_slide_img_list float_left align-self-center">
-													<img src="images/e3.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner ck_elem_slide_img_list_cont float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner ck_elem_slide_img_wrapper_inner_list float_left">
-												<div class="ck_elem_slide_img ck_elem_slide_img_list float_left align-self-center">
-													<img src="images/e4.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner ck_elem_slide_img_list_cont float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner ck_elem_slide_img_wrapper_inner_list float_left">
-												<div class="ck_elem_slide_img ck_elem_slide_img_list float_left align-self-center">
-													<img src="images/e5.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner ck_elem_slide_img_list_cont float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="pager_wrapper float_left">
-												<ul class="pagination">
-													<li><a href="#"><i class="flaticon-left-arrow"></i></a>
-													</li>
-													<li class="btc_shop_pagi"><a href="#">01</a>
-													</li>
-													<li class="btc_shop_pagi"><a href="#">02</a>
-													</li>
-													<li class="btc_third_pegi btc_shop_pagi"><a href="#">03</a>
-													</li>
-													<li class="hidden-xs btc_shop_pagi"><a href="#">04</a>
-													</li>
-													<li><a href="#"><i class="flaticon-right-arrow"></i></a>
-													</li>
-												</ul>
-											</div>
-										</div>
+										</div> --}}
+										
 									</div>
 								</div>
 							</div>

@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 					<div class="ck_title_cont float_left">
-						<p>Blog-Category</p>
+						<p>Blog</p>
 					</div>
 				</div>
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -13,7 +13,7 @@
 						<ul>
 							<li><a href="#">Home &nbsp; ></a>
 							</li>
-							<li>Blog-Category</li>
+							<li>Blog</li>
 						</ul>
 					</div>
 				</div>
@@ -27,96 +27,15 @@
 			<div class="row">
 				<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
 					<div class="x_blog_left_side_wrapper float_left">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="lr_bc_first_box_main_wrapper">
-									<div class="lr_bc_first_box_img_wrapper">
-										<img src="images/bl1.jpg" alt="blog_img">
-									</div>
-									<div class="lr_bc_first_box_img_cont_wrapper">
-										<h2>Autoweek in review: Everything you missed Sept. 11-15</h2>
-										<ul>
-											<li><i class="far fa-calendar-alt"></i>&nbsp; <a href="#">September 19, 2017</a>
-											</li>
-											<li><i class="fas fa-user-alt"></i>&nbsp; <a href="#">by Admin</a>
-											</li>
-											<li><i class="far fa-comments"></i>&nbsp; <a href="#">04 comments</a>
-											</li>
-										</ul>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua. d minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> <span><a href="#">Read More &nbsp;<i class="fa fa-angle-double-right"></i></a></span>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="lr_bc_first_box_main_wrapper lr_bc_first_box_main_wrapper2">
-									<div class="lr_bc_slider_first_wrapper">
-										<div class="owl-carousel owl-theme">
-											<div class="item">
-												<div class="lr_bc_slider_img_wrapper">
-													<img src="images/bl2.jpg" alt="fresh_food_img">
-												</div>
-											</div>
-											<div class="item">
-												<div class="lr_bc_slider_img_wrapper">
-													<img src="images/bl3.jpg" alt="fresh_food_img">
-												</div>
-											</div>
-											<div class="item">
-												<div class="lr_bc_slider_img_wrapper">
-													<img src="images/bl1.jpg" alt="fresh_food_img">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="lr_bc_first_box_img_cont_wrapper">
-										<h2>Rakish Tokyo concept signals hope for Mitsubishi's lineup</h2>
-										<ul>
-											<li><i class="far fa-calendar-alt"></i>&nbsp; <a href="#">September 19, 2017</a>
-											</li>
-											<li><i class="fas fa-user-alt"></i>&nbsp; <a href="#">by Admin</a>
-											</li>
-											<li><i class="far fa-comments"></i>&nbsp; <a href="#">04 comments</a>
-											</li>
-										</ul>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua. d minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> <span><a href="#">Read More &nbsp;<i class="fa fa-angle-double-right"></i></a></span>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="lr_bc_first_box_main_wrapper lr_bc_first_box_main_wrapper2">
-									<div class="hs_blog_box1_img_wrapper">
-										<img src="images/bl3.jpg" class="lr_bc_zoom_img" alt="blog_img">
-										<div class="prs_ms_scene_img_overlay">
-											<ul>
-												<li>
-													<a class="test-popup-link button" rel='external' href='https://www.youtube.com/embed/ryzOXAO0Ss0' title='title'>
-														<img src="images/play.png" alt="play_icon">
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="lr_bc_first_box_img_cont_wrapper">
-										<h2>Dinan BMW S2 M4 first drive: Not for everyone's lineup</h2>
-										<ul>
-											<li><i class="far fa-calendar-alt"></i>&nbsp; <a href="#">September 19, 2017</a>
-											</li>
-											<li><i class="fas fa-user-alt"></i>&nbsp; <a href="#">by Admin</a>
-											</li>
-											<li><i class="far fa-comments"></i>&nbsp; <a href="#">04 comments</a>
-											</li>
-										</ul>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua. d minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> <span><a href="#">Read More &nbsp;<i class="fa fa-angle-double-right"></i></a></span>
-									</div>
-								</div>
-							</div>
+						<div class="row">						
+							{{#each posts}}
 							<div class="col-md-12">
 								<div class="lr_bc_first_box_main_wrapper lr_bc_first_box_main_wrapper2">
 									<div class="lr_bc_first_box_img_wrapper">
-										<img src="images/bl4.jpg" alt="blog_img">
+										<img src="uploads/{{picture}}" alt="blog_img">
 									</div>
 									<div class="lr_bc_first_box_img_cont_wrapper">
-										<h2>Autoweek in review: Everything you missed Sept. 11-15</h2>
+										<h2>{{title}}</h2>
 										<ul>
 											<li><i class="far fa-calendar-alt"></i>&nbsp; <a href="#">September 19, 2017</a>
 											</li>
@@ -125,28 +44,11 @@
 											<li><i class="far fa-comments"></i>&nbsp; <a href="#">04 comments</a>
 											</li>
 										</ul>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do mod tempor incididunt ut labore et dolore magna aliqua. d minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> <span><a href="#">Read More &nbsp;<i class="fa fa-angle-double-right"></i></a></span>
+										<p>{{brief content}}</p> <span><a href="#">Read More &nbsp;<i class="fa fa-angle-double-right"></i></a></span>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
-								<div class="pager_wrapper prs_blog_pagi_wrapper blog_pager_wrapper">
-									<ul class="pagination">
-										<li><a href="#"><i class="flaticon-left-arrow"></i></a>
-										</li>
-										<li class="btc_shop_pagi"><a href="#">01</a>
-										</li>
-										<li class="btc_shop_pagi"><a href="#">02</a>
-										</li>
-										<li class="btc_third_pegi btc_shop_pagi"><a href="#">03</a>
-										</li>
-										<li class="hidden-xs btc_shop_pagi"><a href="#">...</a>
-										</li>
-										<li><a href="#"><i class="flaticon-right-arrow"></i></a>
-										</li>
-									</ul>
-								</div>
-							</div>
+							{{/each}}							
 						</div>
 					</div>
 				</div>

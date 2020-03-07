@@ -27,88 +27,26 @@
 			<h4>our gallery</h4>
 			<h3>Ice Cream Gallery</h3>
 		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g1.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g1.jpg"><i class="flaticon-right-arrow"></i></a>
+		{{#each pictures}}                                    
+			<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
+				<img src="uploads/{{picture}}" alt="" >
+				<div class="overlay"></div>
+				<div class="ck_gallery_cont_wrapper float_left">
+					<h3>{{title}}</h3>
+					<a href="uploads/{{picture}}"><i class="flaticon-right-arrow"></i></a>
+				</div>
 			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g2.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g2.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g3.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g3.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g4.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g4.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g5.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g5.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
+		{{/each}}
+	
+		{{!-- <div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
 			<img src="images/g6.jpg" alt="img">
 			<div class="overlay"></div>
 			<div class="ck_gallery_cont_wrapper float_left">
 				<h3>Cherry Vanilla</h3>
 				<a href="images/g6.jpg"><i class="flaticon-right-arrow"></i></a>
 			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g3.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g3.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g2.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g2.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g4.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g4.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g6.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g6.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div>
-		<div class="ck_red_btn ck_gallery_red_btn float_left">	<a href="#">Read More</a>
-		</div>
+		</div> --}}
+		
 	</div>
 	<!-- ck gallery wrapper End -->
 	<!-- cll wrapper Start-->
