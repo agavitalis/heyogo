@@ -2193,7 +2193,7 @@ a:hover {
 }
 /*-- title css Start --*/
 .ck_title_main_wrapper{
-	background:url('../images/header_bg2.jpg') 50% 0 repeat-y;
+	background:url('../images/header_bg10.jpg') 50% 0 repeat-y;
 	background-position:center 0;
 	background-size:cover;
 	width:100%;
@@ -2212,7 +2212,7 @@ a:hover {
 	margin-left:10px;
 }
 .ck_title_cont li:first-child a{
-	color:#707070;
+	color:#ffffff;
 }
 .ck_title_cont li:first-child a:hover{
 	color:#f25261;
