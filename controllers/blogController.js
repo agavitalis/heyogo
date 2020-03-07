@@ -4,7 +4,16 @@ exports.blog = function (req, res, error) {
 
     if (req.method == "GET") {
 
-        res.render('admin/blog');
+        Post.find({}).exec()
+        .then(function(posts){
+            //catch any response on the url
+            var response = req.query.response
+            res.render('admin/blog', {layout: 'main', posts:posts.map(post => post.toJSON()),response});
+        })
+        .catch(function(error){
+            
+            res.render('admin/blog',{layout: 'main', error: error});
+        })
        
     }
     //create a blog post
