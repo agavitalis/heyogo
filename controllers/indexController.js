@@ -8,7 +8,21 @@ exports.index = function (req, res, error) {
 
     if (req.method == "GET") {
 
-        res.render('index');
+        Gallery.aggregate( [ { $sample: {size: 5} } ] ).exec()
+        .then(function(pictures){
+
+            Product.aggregate( [ { $sample: {size: 5} } ] ).exec()
+            .then(function(products){
+                res.render('index', {layout: 'main', products:products, pictures:pictures});
+            })
+
+           // res.render('index', {layout: 'main', pictures:pictures});
+        })
+        .catch(function(error){
+            
+            res.render('index',{layout: 'main', error: error});
+        })
+        
        
     }
 }
