@@ -2,7 +2,7 @@ let mongoose = require('mongoose');
 
 function connection_db (){
     
-    mongoose.connect(`${process.env.DBSERVER}/${process.env.DBNAME}`,{ useNewUrlParser: true, useUnifiedTopology: true  });
+    mongoose.connect(`${process.env.ONLINEDBSERVER}/${process.env.ONLINEDBNAME}`,{ useNewUrlParser: true, useUnifiedTopology: true  });
     
     //lets check if the connection was not successful
     mongoose.connection.on('error',function(){
