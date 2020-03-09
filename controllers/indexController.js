@@ -6,6 +6,12 @@ var Post = require('../models/post');
 
 exports.index = function (req, res, error) {
 
+    if(req.session.token){
+        var showAdminLink = true
+    }else{
+        var showAdminLink = false
+    }
+
     if (req.method == "GET") {
 
         Gallery.aggregate( [ { $sample: {size: 5} } ] ).exec()
@@ -16,11 +22,17 @@ exports.index = function (req, res, error) {
 
                 Post.aggregate( [ { $sample: {size: 5} } ] ).exec()
                 .then(function(posts){
+
+                    //catch any response on the url
+                    var AuthResponse = req.query.AuthResponse
+
                     res.render('index',
                      {layout: 'main',
                      products:products,
                      pictures:pictures,
                      posts:posts,
+                     admin:showAdminLink,
+                     AuthResponse:AuthResponse,
                      helpers: {
                         brief: function (post) { return post.substring(0, 80); }
                     }

@@ -1,5 +1,6 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var session = require('express-session')
 var bodyParser = require('body-parser');
 var dotenv = require('dotenv');
 var cors = require('cors');
@@ -8,6 +9,7 @@ var web_routes = require('./routes/web');
 
 
 const app = express();
+app.use(session({secret:'heyougu',saveUninitialized: true,resave: true}));
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
 

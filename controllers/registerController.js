@@ -23,20 +23,10 @@ exports.register = async function (req, res, error) {
 
                 }).save( function(error,user){
                     if(error){
-                        res.send({
-                        
-                            status: 401,
-                            success: false,
-                            message: error
-                        })
+                        res.redirect('/?AuthResponse=Registration Error')
                     }else{
-
-                        res.send({              
-                            status: 200,
-                            success: true,
-                            user:user,
-                            message: "User successfully Created"
-                        })
+                        
+                        res.redirect('/?AuthResponse=Registration Successful, Login to Continue')
                     }
                 })
             }

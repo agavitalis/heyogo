@@ -21,7 +21,7 @@ router.use('/register', registerController.register)
 
 //protected routes(admin routes)
 //router.use('/json_patch',authenticator.authenticate, jsonController.json_patch)
-router.use('/admin_dashboard', dashboardController.dashboard)
+router.use('/admin_dashboard', authenticator.authenticate,dashboardController.dashboard)
 router.use('/admin_product',Upload.upload.single('product_image'), productController.product)
 router.use('/admin_gallery',Upload.upload.single('picture'), galleryController.gallery)
 router.use('/admin_contact', contactController.contact)

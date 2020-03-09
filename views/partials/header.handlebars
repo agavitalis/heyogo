@@ -1,8 +1,10 @@
+
 <!-- ck navigation wrapper Start -->
 <div class="ck_main_left_border"><span></span>
 </div>
 <div class="ck_top_life_effect"></div>
 <div class="ck_bot_life_effect"></div>
+  
 <div class="ck_navigation_main_wrapper ck_navigation_inner_main_wrapper float_left">
 	<div class="container-fluid">
 		<div class="ck_logo_wrapper">
@@ -54,6 +56,11 @@
 								<li><a class="global-menu__item global-menu__item--demo-3"
 										href="/contact">Contact</a>
 								</li>
+								{{#if admin}}
+								<li><a class="global-menu__item global-menu__item--demo-3"
+										href="/admin_dashboard">Admin</a>
+								</li>
+								{{/if}}
 							</ul>
 						</div>
 					</div>
@@ -124,4 +131,5 @@
 		</div>
 	</div>    
 </div>
+
 <!-- ck navigation wrapper End -->
