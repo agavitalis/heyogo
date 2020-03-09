@@ -13,9 +13,21 @@ exports.index = function (req, res, error) {
 
             Product.aggregate( [ { $sample: {size: 5} } ] ).exec()
             .then(function(products){
-                res.render('index', {layout: 'main', products:products, pictures:pictures});
-            })
 
+                Post.aggregate( [ { $sample: {size: 5} } ] ).exec()
+                .then(function(posts){
+                    res.render('index',
+                     {layout: 'main',
+                     products:products,
+                     pictures:pictures,
+                     posts:posts,
+                     helpers: {
+                        brief: function (post) { return post.substring(0, 80); }
+                    }
+                    });
+                })
+                
+            })
            // res.render('index', {layout: 'main', pictures:pictures});
         })
         .catch(function(error){

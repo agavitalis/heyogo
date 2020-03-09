@@ -384,84 +384,25 @@
 						<div class="col-md-12">
 							<div class="ck_blog_slider_wrapper float_left animate" data-animate="fadeInUp">
 								<div class="owl-carousel owl-theme">
-									<div class="item">
-										<div class="et_left_news_wrapper">
-											<div class="et_left_img_news2">
-												<div class="et_left_img_overlay"></div>
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-														<p><i>News, Delivery</i>
-														</p>
-														<div class="heart_box"> <a href="#"><i
-																	class="far fa-heart"></i></a>
-														</div>
-														<h4>29-Jan-2019</h4>
-													</div>
+									{{#each posts}}
+										<div class="item">
+											<div class="et_left_news_wrapper">
+												<div class="et_left_img_news2">
+													<div class="et_left_img_overlay"></div>
+												
+												</div>
+												<div class="et_left_cont_news">
+													<h4>Article</h4>
+													<h3>{{title}}</h3>
+													<h5>29-Jan-2019</h5>
+													<p>{{brief content}}</p>
+													<h2><a href="#">Read More</a> <i class="fa fa-angle-double-right"></i>
+													</h2>
 												</div>
 											</div>
-											<div class="et_left_cont_news">
-												<h4>News</h4>
-												<h3>Services - 2019</h3>
-												<h5>29-Jan-2019</h5>
-												<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
-													velit auctor aliquet.</p>
-												<h2><a href="#">Read More</a> <i class="fa fa-angle-double-right"></i>
-												</h2>
-											</div>
 										</div>
-									</div>
-									<div class="item">
-										<div class="et_left_news_wrapper">
-											<div class="et_left_img_news2 et_left_img_news22">
-												<div class="et_left_img_overlay"></div>
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-														<p><i>News, Delivery</i>
-														</p>
-														<div class="heart_box"> <a href="#"><i
-																	class="far fa-heart"></i></a>
-														</div>
-														<h4>29-Jan-2019</h4>
-													</div>
-												</div>
-											</div>
-											<div class="et_left_cont_news">
-												<h4>News</h4>
-												<h3>Services - 2019</h3>
-												<h5>29-Jan-2019</h5>
-												<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
-													velit auctor aliquet.</p>
-												<h2><a href="#">Read More</a> <i class="fa fa-angle-double-right"></i>
-												</h2>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="et_left_news_wrapper">
-											<div class="et_left_img_news2 et_left_img_news23">
-												<div class="et_left_img_overlay"></div>
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-														<p><i>News, Delivery</i>
-														</p>
-														<div class="heart_box"> <a href="#"><i
-																	class="far fa-heart"></i></a>
-														</div>
-														<h4>29-Jan-2019</h4>
-													</div>
-												</div>
-											</div>
-											<div class="et_left_cont_news">
-												<h4>News</h4>
-												<h3>Services - 2019</h3>
-												<h5>29-Jan-2019</h5>
-												<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
-													velit auctor aliquet.</p>
-												<h2><a href="#">Read More</a> <i class="fa fa-angle-double-right"></i>
-												</h2>
-											</div>
-										</div>
-									</div>
+									{{/each}}
+									
 								</div>
 							</div>
 						</div>
