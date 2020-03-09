@@ -146,3 +146,22 @@ exports.customer_contact = function (req, res, error) {
     }
 }
 
+
+exports.blog_readmore = function (req, res, error) {
+
+    if (req.method == "GET") {
+
+        Post.findById(req.params.post_id).exec()
+        .then(function(post){
+            res.render('blog_single', 
+            {layout: 'main',
+             post:post.toJSON(),
+            });
+        })
+        .catch(function(error){
+            
+            res.render('blog',{layout: 'main', error: error});
+        })
+       
+    }
+}

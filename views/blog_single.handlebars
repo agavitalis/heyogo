@@ -11,7 +11,7 @@
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 					<div class="ck_title_cont float_left">
 						<ul>
-							<li><a href="#">Home &nbsp; ></a>
+							<li><a href="/">Home &nbsp; ></a>
 							</li>
 							<li>Blog-Single</li>
 						</ul>
@@ -31,10 +31,10 @@
 							<div class="col-md-12">
 								<div class="lr_bc_first_box_main_wrapper">
 									<div class="lr_bc_first_box_img_wrapper">
-										<img src="images/bl1.jpg" alt="blog_img">
+										<img src="../uploads/{{post.picture}}" alt="blog_img">
 									</div>
 									<div class="lr_bc_first_box_img_cont_wrapper">
-										<h2>WANNA PLAY?</h2>
+										<h2>{{post.title}}</h2>
 										<ul>
 											<li><i class="far fa-calendar-alt"></i>&nbsp; <a href="#">September 19, 2017</a>
 											</li>
@@ -43,20 +43,17 @@
 											<li><i class="far fa-comments"></i>&nbsp; <a href="#">04 comments</a>
 											</li>
 										</ul>
-										<p>What's your favorite game? Nam a diam tincidunt, condimentum nisi et, fringilla lectus. Nullam nec lectus eu erat temus pulvinar. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud citation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-											<br>
-											<br>What's your favorite game? Nam a diam tincidunt, condimentum nisi et, fringilla lectus. Nullam nec lectus eu erat temus pulvinar. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud citation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+										<p>{{post.content}}</p>
 									</div>
 									<div class="gc_blog_index_slider_post_wrapper gc_blog_single_index_slider_post_wrapper">
 										<div class="gc_blog_letest_week_wrapper">
 											<div class="gc_blog_quote_wrapper">
-												<img src="images/quote22.png" alt="quote" />
-												<h3>" The Education of Tomorrow, Rooted in Tradition Invite You
-Learning Management System"</h3>
-												<p>- by Jhon Doe</p>
+												<img src="../images/quote22.png" alt="quote" />
+												<h3>"Huyogo!!! Norishing youghurts good for you"</h3>
+												<p>- Mgt</p>
 											</div>
 										</div>
-										<p>What's your favorite game? Nam a diam tincidunt, condimentum nisi et, fringilla lectus. Nullam nec lectus eu erat tempus pulvinar. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud citation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+										
 									</div>
 									<div class="blog_single_social_icon float_left">
 										<h3>Share Post :</h3>
@@ -73,7 +70,7 @@ Learning Management System"</h3>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
+							{{!-- <div class="col-md-12">
 								<div class="blog_single_admin_sec_wrapper">
 									<div class="blog_single_admin_sec">
 										<div class="admin_img_wrapper">
@@ -225,7 +222,7 @@ Learning Management System"</h3>
 										</form>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
@@ -244,7 +241,7 @@ Learning Management System"</h3>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
+							{{!-- <div class="col-md-12">
 								<div class="jp_rightside_job_categories_wrapper jp_rightside_job_categories_wrapper2">
 									<div class="jp_rightside_job_categories_heading">
 										<h4>Categories</h4>
@@ -351,7 +348,7 @@ Post Formate</a></h4>
 										</ul>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
@@ -359,73 +356,9 @@ Post Formate</a></h4>
 		</div>
 	</div>
 	<!-- x blog main and sidebar Wrapper End -->
-	<div class="ck_call_main_wrapper float_left">
-		<div class="container">
-			<div class="ck_cll_left_wrapper">
-				<div class="ck_cll_icon align-self-center">	<i class="flaticon-phone-contact"></i>
-					<h4>Call Us</h4>
-					<p>+91 907 474 4316</p>
-				</div>
-				<div class="ck_cll_img">
-					<img src="images/cll_img.png" alt="img">
-				</div>
-			</div>
-			<div class="ck_cll_right_wrapper">
-				<div class="cl_cll_form">
-					<input type="text" placeholder="Your Email">
-					<button>Subscribe</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{> subscribe}}
 	<!-- cll wrapper End-->
 	<!-- partner wrapper Start-->
-	<div class="ck_partner_inner_main_wrapper float_left">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="ck_inner_heading_wrapper float_left">
-						<h4>Our Partners</h4>
-						<h3>Partners Words</h3>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="lr_prt_slider_wrapper">
-						<div class="owl-carousel owl-theme">
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p1.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p2.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p3.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p4.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p5.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p6.jpg" alt="partner_img">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{> partners}}
+	<!-- partner wrapper End-->
 	{{> footer}}

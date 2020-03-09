@@ -11,7 +11,7 @@
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 					<div class="ck_title_cont float_left">
 						<ul>
-							<li><a href="#">Home &nbsp; ></a>
+							<li><a href="/">Home &nbsp; ></a>
 							</li>
 							<li>Products</li>
 						</ul>
@@ -92,27 +92,7 @@
 
 										{{/each}}
 										
-										
-										{{!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner float_left">
-												<div class="ck_elem_slide_img float_left">
-													<img src="images/e3.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div> --}}
+									
 										
 										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-xs">
 											<div class="pager_wrapper">
@@ -160,26 +140,7 @@
 										{{/each}}
 
 
-										{{!-- <div class="col-md-12">
-											<div class="ck_elem_slide_img_wrapper ck_elem_slide_img_wrapper_inner ck_elem_slide_img_wrapper_inner_list float_left">
-												<div class="ck_elem_slide_img ck_elem_slide_img_list float_left align-self-center">
-													<img src="images/e2.png" alt="img">
-												</div>
-												<div class="ck_elem_slide_img_cont ck_elem_slide_img_cont_inner ck_elem_slide_img_list_cont float_left">
-													<h3>Cherry Vanilla</h3>
-													<div class="ck_elem_star">	<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-														<i class="fas fa-star"></i>
-													</div>
-													<p>Aenean sollicitudin, lorem quis</p>
-													<h5>$ 10.00</h5>
-													<div class="ck_offer_btn ck_offer_btn_inner float_left">	<a href="#">Add to Cart</a>
-													</div>
-												</div>
-											</div>
-										</div> --}}
+					
 										
 									</div>
 								</div>
@@ -192,74 +153,9 @@
 	</div>
 	<!-- btc Shop Wrapper End -->
 	<!-- cll wrapper Start-->
-	<div class="ck_call_main_wrapper float_left">
-		<div class="container">
-			<div class="ck_cll_left_wrapper">
-				<div class="ck_cll_icon align-self-center">	<i class="flaticon-phone-contact"></i>
-					<h4>Call Us</h4>
-					<p>+91 907 474 4316</p>
-				</div>
-				<div class="ck_cll_img">
-					<img src="images/cll_img.png" alt="img">
-				</div>
-			</div>
-			<div class="ck_cll_right_wrapper">
-				<div class="cl_cll_form">
-					<input type="text" placeholder="Your Email">
-					<button>Subscribe</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{> subscribe}}
 	<!-- cll wrapper End-->
 	<!-- partner wrapper Start-->
-	<div class="ck_partner_inner_main_wrapper float_left">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="ck_inner_heading_wrapper float_left">
-						<h4>Our Partners</h4>
-						<h3>Partners Words</h3>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="lr_prt_slider_wrapper">
-						<div class="owl-carousel owl-theme">
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p1.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p2.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p3.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p4.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p5.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p6.jpg" alt="partner_img">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{> partners}}
 	<!-- partner wrapper End-->
 	{{> footer}}

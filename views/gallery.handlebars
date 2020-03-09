@@ -11,7 +11,7 @@
 				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 					<div class="ck_title_cont float_left">
 						<ul>
-							<li><a href="#">Home &nbsp; ></a>
+							<li><a href="/">Home &nbsp; ></a>
 							</li>
 							<li>Gallery</li>
 						</ul>
@@ -38,86 +38,13 @@
 			</div>
 		{{/each}}
 	
-		{{!-- <div class="ck_gallery_box_main_wrapper ck_gallery_box_main_wrapper_inner float_left zoom_popup">
-			<img src="images/g6.jpg" alt="img">
-			<div class="overlay"></div>
-			<div class="ck_gallery_cont_wrapper float_left">
-				<h3>Cherry Vanilla</h3>
-				<a href="images/g6.jpg"><i class="flaticon-right-arrow"></i></a>
-			</div>
-		</div> --}}
 		
 	</div>
 	<!-- ck gallery wrapper End -->
 	<!-- cll wrapper Start-->
-	<div class="ck_call_main_wrapper float_left">
-		<div class="container">
-			<div class="ck_cll_left_wrapper">
-				<div class="ck_cll_icon align-self-center">	<i class="flaticon-phone-contact"></i>
-					<h4>Call Us</h4>
-					<p>+91 907 474 4316</p>
-				</div>
-				<div class="ck_cll_img">
-					<img src="images/cll_img.png" alt="img">
-				</div>
-			</div>
-			<div class="ck_cll_right_wrapper">
-				<div class="cl_cll_form">
-					<input type="text" placeholder="Your Email">
-					<button>Subscribe</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{> subscribe}}
 	<!-- cll wrapper End-->
 	<!-- partner wrapper Start-->
-	<div class="ck_partner_inner_main_wrapper float_left">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="ck_inner_heading_wrapper float_left">
-						<h4>Our Partners</h4>
-						<h3>Partners Words</h3>
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="lr_prt_slider_wrapper">
-						<div class="owl-carousel owl-theme">
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p1.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p2.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p3.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p4.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p5.jpg" alt="partner_img">
-								</div>
-							</div>
-							<div class="item">
-								<div class="lr_prt_img_wrapper">
-									<img src="images/p6.jpg" alt="partner_img">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	{{> partners}}
 	<!-- partner wrapper End-->
 	{{> footer}}

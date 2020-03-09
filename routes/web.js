@@ -29,6 +29,7 @@ router.use('/admin_user', userController.user)
 router.use('/admin_blog',Upload.upload.single('cover_image'), blogController.blog)
 
 //unprotected routes(website routes)
+router.use('/blog/:post_id', indexController.blog_readmore)
 router.use('/blog', indexController.blog)
 router.use('/gallery', indexController.gallery)
 router.use('/products', indexController.products)
