@@ -1,18 +1,18 @@
-var express = require('express');
+const express = require('express');
 const router = express.Router();
-var authenticator = require('../services/authenticator');
-var Upload = require('../services/fileUpload')
+const authenticator = require('../services/authenticator');
+const Upload = require('../services/fileUpload')
 
 //import controllers
-var indexController = require('../controllers/indexController');
-var registerController = require('../controllers/registerController');
-var loginController = require('../controllers/loginController');
-var dashboardController = require('../controllers/dashboardController');
-var productController = require('../controllers/productController');
-var galleryController = require('../controllers/galleryController');
-var contactController = require('../controllers/contactUsController');
-var userController = require('../controllers/userController');
-var blogController = require('../controllers/blogController');
+const indexController = require('../controllers/indexController');
+const registerController = require('../controllers/registerController');
+const loginController = require('../controllers/loginController');
+const dashboardController = require('../controllers/dashboardController');
+const productController = require('../controllers/productController');
+const galleryController = require('../controllers/galleryController');
+const contactController = require('../controllers/contactUsController');
+const userController = require('../controllers/userController');
+const blogController = require('../controllers/blogController');
 
 //auth
 router.use('/login', loginController.login)
@@ -33,7 +33,8 @@ router.use('/admin/createGallery',Upload.upload.single('picture'), galleryContro
 router.use('/admin/contact', contactController.contact)
 
 /*----------User---------------*/
-router.use('/admin/user', userController.user)
+router.use('/admin/users', userController.getUsers)
+router.use('/admin/createUser', userController.createUser)
 
 /*----------Blog---------------*/
 router.use('/admin/blogPosts', blogController.getBlogPosts)

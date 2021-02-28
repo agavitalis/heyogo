@@ -1,6 +1,5 @@
-//necessary imports
-var User = require('../models/user');
-var Bcrypt = require('bcryptjs');
+const User = require('../models/user');
+const Bcrypt = require('bcryptjs');
 
 exports.register = async function (req, res, error) {
 
@@ -13,7 +12,7 @@ exports.register = async function (req, res, error) {
                 })
             }else{
 
-                var passwordHash = Bcrypt.hashSync(req.body.password , 10)
+                let passwordHash = Bcrypt.hashSync(req.body.password , 10)
                 new User({
 
                     first_name:req.body.firstname,

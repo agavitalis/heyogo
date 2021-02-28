@@ -1,7 +1,6 @@
-//import anything necessary
-var User = require('../models/user');
-var Bcrypt = require('bcryptjs');
-var Jwt = require('jsonwebtoken');
+const User = require('../models/user');
+const Bcrypt = require('bcryptjs');
+const Jwt = require('jsonwebtoken');
 
 
 
@@ -29,15 +28,11 @@ exports.login = async function (req, res, error) {
                         }
                     );
                     
-                    //set the session
                     req.session.token = token;
+                    req.session.vitalis = "Ogbonna Vitalis";
+                    
                     res.redirect('/?AuthResponse=Login Successful')
                 } else {
-                   
-                    // res.send(403).json({
-                    //     success: false,
-                    //     message: 'Incorrect username or password'
-                    // });
                     res.redirect('/?AuthResponse=Invalid Credentials')
                 }
             }else{

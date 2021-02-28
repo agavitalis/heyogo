@@ -1,4 +1,4 @@
-var ContactUs = require('../models/contactUs');
+const ContactUs = require('../models/contactUs');
 
 exports.contact = function (req, res, error) {
 
@@ -7,7 +7,7 @@ exports.contact = function (req, res, error) {
         ContactUs.find({}).exec()
         .then(function(messages){
             //catch any response on the url
-            var response = req.query.response
+            let response = req.query.response
             res.render('admin/contact', {layout: 'main', messages:messages.map(message => message.toJSON()),response});
         })
         .catch(function(error){

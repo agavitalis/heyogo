@@ -15,7 +15,7 @@ exports.gallery = function (req, res, error) {
         Gallery.find({}).exec()
             .then(function (pictures) {
                 //catch any response on the url
-                var response = req.query.response
+                let response = req.query.response
                 res.render('admin/gallery', { layout: 'main', pictures: pictures.map(picture => picture.toJSON()), response });
             })
             .catch(function (error) {

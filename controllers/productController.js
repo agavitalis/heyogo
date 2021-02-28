@@ -15,7 +15,7 @@ exports.getProducts = function (req, res, error) {
         Product.find({}).exec()
             .then(function (products) {
                 //catch any response on the url
-                var response = req.query.response
+                let response = req.query.response
                 res.render('admin/product', { layout: 'main', products: products.map(product => product.toJSON()), response });
             })
             .catch(function (error) {
@@ -36,7 +36,7 @@ exports.createProduct = function (req, res, error) {
             let picture_url = image.secure_url
 
 
-            var product = new Product({
+            let product = new Product({
                 product_name: req.body.product_name,
                 product_description: req.body.product_description,
                 picture: picture_name,
