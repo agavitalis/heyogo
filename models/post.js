@@ -14,8 +14,9 @@ var post_schema = new mongoose.Schema({
     picture_url: {
         type: String,
     },
-   
 
+}, {
+    timestamps: true
 });
 
 var post = mongoose.model("Post", post_schema);

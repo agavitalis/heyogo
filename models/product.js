@@ -15,6 +15,8 @@ var product_schema = new mongoose.Schema({
         type: String,
     },
 
+}, {
+    timestamps: true
 });
 
 var product = mongoose.model("Product", product_schema);

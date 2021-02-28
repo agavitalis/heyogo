@@ -1,4 +1,4 @@
-var ContactUs = require('../models/contact_us');
+var ContactUs = require('../models/contactUs');
 
 exports.contact = function (req, res, error) {
 

@@ -1,7 +1,7 @@
 var express = require('express');
 const router = express.Router();
 var authenticator = require('../services/authenticator');
-var Upload = require('../services/file_upload')
+var Upload = require('../services/fileUpload')
 
 //import controllers
 var indexController = require('../controllers/indexController');
@@ -10,7 +10,7 @@ var loginController = require('../controllers/loginController');
 var dashboardController = require('../controllers/dashboardController');
 var productController = require('../controllers/productController');
 var galleryController = require('../controllers/galleryController');
-var contactController = require('../controllers/contact_usController');
+var contactController = require('../controllers/contactUsController');
 var userController = require('../controllers/userController');
 var blogController = require('../controllers/blogController');
 
@@ -18,15 +18,26 @@ var blogController = require('../controllers/blogController');
 router.use('/login', loginController.login)
 router.use('/register', registerController.register)
 
-
 //protected routes(admin routes)
-//router.use('/json_patch',authenticator.authenticate, jsonController.json_patch)
-router.use('/admin_dashboard', authenticator.authenticate,dashboardController.dashboard)
-router.use('/admin_product',Upload.upload.single('product_image'), productController.product)
-router.use('/admin_gallery',Upload.upload.single('picture'), galleryController.gallery)
-router.use('/admin_contact', contactController.contact)
-router.use('/admin_user', userController.user)
-router.use('/admin_blog',Upload.upload.single('cover_image'), blogController.blog)
+router.use('/admin/dashboard', authenticator.authenticate,dashboardController.dashboard)
+
+/*----------Products---------------*/
+router.use('/admin/products',productController.getProducts)
+router.use('/admin/createProduct',Upload.upload.single('product_image'), productController.createProduct)
+
+/*----------Gallery---------------*/
+router.use('/admin/gallery', galleryController.gallery)
+router.use('/admin/createGallery',Upload.upload.single('picture'), galleryController.gallery)
+
+/*----------Contact---------------*/
+router.use('/admin/contact', contactController.contact)
+
+/*----------User---------------*/
+router.use('/admin/user', userController.user)
+
+/*----------Blog---------------*/
+router.use('/admin/blogPosts', blogController.getBlogPosts)
+router.use('/admin/createBlogPost',Upload.upload.single('cover_image'), blogController.createBlogPost)
 
 //unprotected routes(website routes)
 router.use('/blog/:post_id', indexController.blog_readmore)

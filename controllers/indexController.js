@@ -1,5 +1,5 @@
 
-var ContactUs = require('../models/contact_us');
+var ContactUs = require('../models/contactUs');
 var Gallery = require('../models/gallery');
 var Product = require('../models/product');
 var Post = require('../models/post');

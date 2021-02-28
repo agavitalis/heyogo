@@ -15,10 +15,13 @@ var user_schema = new mongoose.Schema({
         type: String,
     },
     userType: {
-        type: String,
-        default:"user"
-    },
+		type: String,
+		enum : ["user","admin","sales"],
+		default: "user"
+	},
 
+}, {
+    timestamps: true
 });
 
 var user = mongoose.model("User", user_schema);

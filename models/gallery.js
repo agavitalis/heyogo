@@ -5,7 +5,7 @@ var gallery_schema = new mongoose.Schema({
     title: {
         type: String,
     },
-    
+
     picture_description: {
         type: String,
     },
@@ -13,11 +13,13 @@ var gallery_schema = new mongoose.Schema({
     picture: {
         type: String,
     },
-    
+
     picture_url: {
         type: String,
     },
-  
+
+}, {
+    timestamps: true
 });
 
 var gallery = mongoose.model("Gallery", gallery_schema);

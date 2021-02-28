@@ -10,9 +10,10 @@ var contact_us_schema = new mongoose.Schema({
     },
     message: {
         type: String,
-    },
-  
-
+    }
+    
+}, {
+    timestamps: true
 });
 
 var contact_us = mongoose.model("ContactUs", contact_us_schema);
