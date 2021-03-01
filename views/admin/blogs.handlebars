@@ -13,7 +13,7 @@
                     <ul>
                         <li><a href="#">Admin &nbsp; ></a>
                         </li>
-                        <li>Contacts</li>
+                        <li>Post</li>
                     </ul>
                 </div>
             </div>
@@ -25,21 +25,36 @@
 
 <!-- btc Shop Wrapper Start -->
 <div class="btc_shop_indx_main_wrapper">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-           {{> adminSidebar}}
+            {{> adminSidebar}}
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="ck_prod_filter_main_box_wrapper">
                     <div class="row">
 
-                        <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="col-lg-12 col-md-12">
                             <div class="gc_shop_indx_select_box_wrapper">
                                 <div class="gc_causes_select_box">
-                                    <h4>Messages for Admin</h4>
+                                    <h4>Posts</h4>
                                 </div>
                             </div>
                         </div>
-                       
+                        <div class="col-lg-12 col-md-12">
+                            {{#if response}}
+                            <div class="alert alert-primary alert-wth-icon alert-dismissible fade show" role="alert">
+                                <span class="alert-icon-wrap"><i class="fa fa-info"></i></span>{{response}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            {{/if}}
+
+                            <a class="btn btn-success float-right mb-5" href="/admin/createBlogPost">
+                                Add New Post
+                            </a>
+
+                        </div>
+
                     </div>
                 </div>
                 <div class="row">
@@ -48,23 +63,23 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Message</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Cover Picture</th>
+                                    <th scope="col">View</th>
                                 </tr>
                             </thead>
                             <tbody>
-                               
-                                {{#each messages}}
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>{{name}}</td>
-                                        <td>{{email}}</td>
-                                        <td>{{message}}</td>
-                                        	
-                                    </tr>
+
+                                {{#each posts}}
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>{{title}}</td>
+
+                                    <td><img src="uploads/{{picture}}" alt="" width="50" height="50">
+                                    <td><a href="#">View</a></td>
+                                </tr>
                                 {{/each}}
-                              
+
                             </tbody>
                         </table>
                     </div>

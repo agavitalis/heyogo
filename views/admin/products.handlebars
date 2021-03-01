@@ -13,7 +13,7 @@
                     <ul>
                         <li><a href="#">Admin &nbsp; ></a>
                         </li>
-                        <li>Contacts</li>
+                        <li>Products</li>
                     </ul>
                 </div>
             </div>
@@ -25,46 +25,62 @@
 
 <!-- btc Shop Wrapper Start -->
 <div class="btc_shop_indx_main_wrapper">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-           {{> adminSidebar}}
+            {{> adminSidebar}}
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="ck_prod_filter_main_box_wrapper">
                     <div class="row">
 
-                        <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="col-lg-2 col-md-4 col-sm-3">
                             <div class="gc_shop_indx_select_box_wrapper">
                                 <div class="gc_causes_select_box">
-                                    <h4>Messages for Admin</h4>
+                                    <h4>Products</h4>
                                 </div>
                             </div>
                         </div>
-                       
+                        <div class="col-lg-10 col-md-8 col-sm-9">
+                            {{#if response}}
+                            <div class="alert alert-primary alert-wth-icon alert-dismissible fade show" role="alert">
+                                <span class="alert-icon-wrap"><i class="fa fa-info"></i></span>{{response}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            {{/if}}
+
+
+                            <a class="btn btn-success float-right mb-5" href="/admin/createProduct">
+                                Add Product
+                            </a>
+
+                        </div>
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="column col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <table class="table table-bordered">
                             <thead>
+
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Message</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Picture</th>
                                 </tr>
                             </thead>
                             <tbody>
-                               
-                                {{#each messages}}
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>{{name}}</td>
-                                        <td>{{email}}</td>
-                                        <td>{{message}}</td>
-                                        	
-                                    </tr>
+                                {{#each products}}
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>{{product_name}}</td>
+                                    <td>{{product_description}}</td>
+                                    <td><img src="{{picture_url}}" alt="" width="50" height="50">
+
+                                </tr>
                                 {{/each}}
-                              
+
                             </tbody>
                         </table>
                     </div>

@@ -1,0 +1,113 @@
+{{> header}}
+<!-- ck title wrapper -->
+<div class="ck_title_main_wrapper float_left">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="ck_title_cont float_left">
+                    <p>Admin</p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="ck_title_cont float_left">
+                    <ul>
+                        <li><a href="#">Admin &nbsp; ></a>
+                        </li>
+                        <li>Create Blog Post</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ck title wrapper End -->
+
+
+<!-- btc Shop Wrapper Start -->
+<div class="btc_shop_indx_main_wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            {{> adminSidebar}}
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                <div class="ck_prod_filter_main_box_wrapper">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="gc_shop_indx_select_box_wrapper">
+                                <div class="gc_causes_select_box">
+                                    <h4>Create Blog Posts</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            {{#if response}}
+                            <div class="alert alert-primary alert-wth-icon alert-dismissible fade show" role="alert">
+                                <span class="alert-icon-wrap"><i class="fa fa-info"></i></span>{{response}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            {{/if}}
+                          
+                            <!--Product Details-->
+                            <div class="checkout-form">
+                                <div class="row clearfix">
+                                    <!--Column-->
+                                    <div class="column col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div
+                                            class="btc_shop_single_prod_right_section related_pdt_shop_head checkout_heading">
+                                            <h1>Post Details </h1>
+                                        </div>
+                                        
+                                            <form action="/admin/createBlogPost" enctype="multipart/form-data"
+                                                method="POST">
+                                                
+                                                <!--Form Group-->
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-label">Post Title <sup>*</sup>
+                                                    </div>
+                                                    <input class="form-control" type="text" name="title"
+                                                        value="" placeholder="Title" required="true">
+                                                </div>
+
+                                                <!--Form Group-->
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-label">Post Body</div>
+                                                    <textarea rows="7" name="content"
+                                                        required="true"></textarea>
+                                                </div>
+                                                <!--Form Group-->
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-label">Description Image</div>
+                                                    <input type="file" name="cover_image" value=""
+                                                        placeholder="" required="true">
+
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <button class="btn btn-success float-right"> Add
+                                                        Post</button>
+
+                                                </div>
+                                            </form>
+                                        
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <!--End Product Details-->
+                                  
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- btc Shop Wrapper End -->
+
+{{> footer}}

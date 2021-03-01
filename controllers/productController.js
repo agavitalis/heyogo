@@ -16,19 +16,23 @@ exports.getProducts = function (req, res, error) {
             .then(function (products) {
                 //catch any response on the url
                 let response = req.query.response
-                res.render('admin/product', { layout: 'main', products: products.map(product => product.toJSON()), response });
+                res.render('admin/products', { layout: 'main', products: products.map(product => product.toJSON()), response });
             })
             .catch(function (error) {
 
-                res.render('admin/product', { layout: 'main', error: error });
+                res.render('admin/products', { layout: 'main', error: error });
             })
 
     }
 }
 
 exports.createProduct = function (req, res, error) {
-    if (req.method == "POST") {
 
+    if (req.method == "GET") {
+        //catch any response on the url
+        let response = req.query.response
+        res.render('admin/createProduct', { layout: 'main', response });
+    } else {
         //take care of cloudinary uploads, by getting the right path
         cloudinary.uploader.upload(req.file.path, function (error, image) {
 
@@ -54,12 +58,15 @@ exports.createProduct = function (req, res, error) {
                     })
 
                 } else {
-                    res.redirect('/admin_product?response= Product successfully created')
+                    res.redirect('/admin/createProduct?response= Product successfully created')
                 }
 
             })
 
         })
-
     }
+
+
+
+
 } 
