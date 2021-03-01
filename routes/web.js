@@ -14,11 +14,11 @@ const contactController = require('../controllers/contactUsController');
 const userController = require('../controllers/userController');
 const blogController = require('../controllers/blogController');
 
-//auth
+//####################### Auth
 router.use('/login', loginController.login)
 router.use('/register', registerController.register)
 
-//protected routes(admin routes)
+//####################### Protected routes(admin routes)
 router.use('/admin/dashboard', authenticator.authenticate,dashboardController.dashboard)
 
 /*----------Products---------------*/
@@ -27,7 +27,7 @@ router.use('/admin/createProduct',Upload.upload.single('product_image'), product
 
 /*----------Gallery---------------*/
 router.use('/admin/gallery', galleryController.gallery)
-router.use('/admin/createGallery',Upload.upload.single('picture'), galleryController.gallery)
+router.use('/admin/createGallery',Upload.upload.single('picture'), galleryController.createGallery)
 
 /*----------Contact---------------*/
 router.use('/admin/contact', contactController.contact)
@@ -40,7 +40,7 @@ router.use('/admin/createUser', userController.createUser)
 router.use('/admin/blogPosts', blogController.getBlogPosts)
 router.use('/admin/createBlogPost',Upload.upload.single('cover_image'), blogController.createBlogPost)
 
-//unprotected routes(website routes)
+//####################### Unprotected routes(website routes)
 router.use('/blog/:post_id', indexController.blog_readmore)
 router.use('/blog', indexController.blog)
 router.use('/gallery', indexController.gallery)

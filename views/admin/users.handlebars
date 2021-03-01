@@ -13,7 +13,7 @@
                     <ul>
                         <li><a href="#">Admin &nbsp; ></a>
                         </li>
-                        <li>Gallery</li>
+                        <li>Users</li>
                     </ul>
                 </div>
             </div>
@@ -27,15 +27,15 @@
 <div class="btc_shop_indx_main_wrapper">
     <div class="container-fluid">
         <div class="row">
-           {{> adminSidebar }}
+            {{> adminSidebar}}
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="ck_prod_filter_main_box_wrapper">
                     <div class="row">
 
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 col-md-4 col-sm-3">
                             <div class="gc_shop_indx_select_box_wrapper">
                                 <div class="gc_causes_select_box">
-                                    <h4>Product Gallery</h4>
+                                    <h4>Users</h4>
                                 </div>
                             </div>
                         </div>
@@ -50,11 +50,11 @@
                             {{/if}}
                             
 
-                                <a class="btn btn-success float-right mb-5" href="/admin/createGallery">
-                                    Add Picture
+                                <a class="btn btn-success float-right mb-5" href="/admin/createUser">
+                                    Add User
                                 </a>
 
-                                
+                               
                         </div>
 
                     </div>
@@ -65,22 +65,22 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">Picture</th>
+                                    <th scope="col">Firstname</th>
+                                    <th scope="col">Lastname</th>
+                                    <th scope="col">Email</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each pictures}}
+                              
+                                {{#each users}}
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>{{title}}</td>
-                                        <td>{{picture_description}}</td>
-                                        <td><img src="{{picture_url}}" alt="" width="50" height="50" ></td>
+                                        <td>{{first_name}}</td>
+                                        <td>{{last_name}}</td>
+                                        <td>{{email}}</td>
                                         	
                                     </tr>
                                 {{/each}}
-                              
                             </tbody>
                         </table>
                     </div>

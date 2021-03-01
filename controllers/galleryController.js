@@ -28,7 +28,13 @@ exports.gallery = function (req, res, error) {
 
 exports.createGallery = function (req, res, error) {
     //create a new gallery photo
-    if (req.method == "POST") {
+    if (req.method == "GET") {
+
+         //catch any response on the url
+         let response = req.query.response
+         res.render('admin/createGallery', { layout: 'main', response });
+
+    }else{
 
         //take care of cloudinary uploads, by getting the right path
         cloudinary.uploader.upload(req.file.path, function (error, image) {
@@ -36,18 +42,16 @@ exports.createGallery = function (req, res, error) {
             let picture_name = req.file.filename
             let picture_url = image.secure_url
 
-            let gallery = new Gallery({
+            new Gallery({
 
                 title: req.body.title,
                 picture_description: req.body.description,
                 picture: picture_name,
                 picture_url: picture_url,
 
-            })
-
-            gallery.save(function (error) {
+            }).save(function (error) {
                 if (error) {
-                    res.render("admin/gallery", {
+                    res.render("admin/createGallery", {
                         showInfo: true,
                         status: 401,
                         success: false,
@@ -55,7 +59,7 @@ exports.createGallery = function (req, res, error) {
                     })
 
                 } else {
-                    res.redirect('/admin_gallery?response=Picture uploaded to successfully')
+                    res.redirect('/admin/createGallery?response=Picture uploaded to successfully')
                 }
 
             })

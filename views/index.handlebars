@@ -146,11 +146,11 @@
 							{{#each pictures}}     
 							<div class="item">
 								<div class="ck_gallery_box_main_wrapper float_left">
-									<img src="uploads/{{picture}}" alt="img">
+									<img src="{{picture_url}}" alt="img">
 									<div class="overlay"></div>
 									<div class="ck_gallery_cont_wrapper float_left">
 										<h3>{{title}}</h3>
-										<a href="uploads/{{picture}}"><i class="flaticon-right-arrow"></i></a>
+										<a href="{{picture_url}}"><i class="flaticon-right-arrow"></i></a>
 									</div>
 								</div>
 							</div>
@@ -335,7 +335,7 @@
 									<div class="item">
 										<div class="ck_elem_slide_img_wrapper float_left">
 											<div class="ck_elem_slide_img float_left">
-												<img src="uploads/{{picture}}" alt="img">
+												<img src="{{picture}}" alt="img">
 											</div>
 											<div class="ck_elem_slide_img_cont float_left">
 												<h3>{{product_name}}</h3>
